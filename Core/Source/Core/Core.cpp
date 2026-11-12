@@ -2,12 +2,11 @@
 
 #include <iostream>
 
-namespace Core {
-
+namespace Core
+{
 	void PrintHelloWorld()
 	{
 		std::cout << "Hello World!\n";
 		std::cin.get();
 	}
-
 }

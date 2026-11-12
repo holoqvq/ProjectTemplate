@@ -1,8 +1,7 @@
 project "Core"
    kind "StaticLib"
    language "C++"
-   cppdialect "C++20"
-   targetdir "Binaries/%{cfg.buildcfg}"
+   cppdialect "C++23"
    staticruntime "off"
 
    files { "Source/**.h", "Source/**.cpp" }
@@ -12,8 +11,8 @@ project "Core"
       "Source"
    }
 
-   targetdir ("../Binaries/" .. OutputDir .. "/%{prj.name}")
-   objdir ("../Binaries/Intermediates/" .. OutputDir .. "/%{prj.name}")
+   targetdir ("../build/" .. OutputDir .. "/bin")
+   objdir ("../build/" .. OutputDir .. "/obj/%{prj.name}")
 
    filter "system:windows"
        systemversion "latest"
