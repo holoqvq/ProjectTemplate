@@ -24,6 +24,9 @@ project "App"
        systemversion "latest"
        defines { "WINDOWS" }
 
+   filter "system:linux"
+       defines { "LINUX" }
+
    filter "configurations:Debug"
        defines { "DEBUG" }
        runtime "Debug"

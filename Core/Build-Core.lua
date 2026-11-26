@@ -16,7 +16,10 @@ project "Core"
 
    filter "system:windows"
        systemversion "latest"
-       defines { }
+       defines { "WINDOWS" }
+
+   filter "system:linux"
+       defines { "LINUX" }
 
    filter "configurations:Debug"
        defines { "DEBUG" }
